@@ -1,0 +1,12 @@
+001|NPC|This is a line.|0
+002|NPC|This is another line.|0
+003|JACK|This is one more line.|0
+004|NPC|This is a question.|0|3
+005|Option|This is the first option.|8
+006|Option|This is the second option.|10
+007|Option|This is the third option.|12
+008|NPC|You choose option 1.|0
+009|NPC|It will have consequences!|1
+010|NPC|You choose option 2.|0
+011|NPC|It will have consequences!|1
+012|NPC|I'll kill you!|1
