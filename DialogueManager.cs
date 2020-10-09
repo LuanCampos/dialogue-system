@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -17,12 +18,12 @@ public class DialogueManager : MonoBehaviour
 	public Button PlayerOptions4;
 	public float typingSpeed = 2f;
 	
-	private Text dialogueChar;
-	private Text dialogueLine;
-	private Text playerOptions1;
-	private Text playerOptions2;
-	private Text playerOptions3;
-	private Text playerOptions4;
+	private TextMeshProUGUI dialogueChar;
+	private TextMeshProUGUI dialogueLine;
+	private TextMeshProUGUI playerOptions1;
+	private TextMeshProUGUI playerOptions2;
+	private TextMeshProUGUI playerOptions3;
+	private TextMeshProUGUI playerOptions4;
 	private string[] sentences;
 	private string[] currentLine;
 	private int index;
@@ -34,12 +35,12 @@ public class DialogueManager : MonoBehaviour
 	
     void Start()
     {
-        dialogueChar = DialogueLine.gameObject.transform.GetChild(0).GetComponent<Text>();
-		dialogueLine = DialogueLine.gameObject.transform.GetChild(1).GetComponent<Text>();
-		playerOptions1 = PlayerOptions1.gameObject.transform.GetChild(0).GetComponent<Text>();
-		playerOptions2 = PlayerOptions2.gameObject.transform.GetChild(0).GetComponent<Text>();
-		playerOptions3 = PlayerOptions3.gameObject.transform.GetChild(0).GetComponent<Text>();
-		playerOptions4 = PlayerOptions4.gameObject.transform.GetChild(0).GetComponent<Text>();
+        dialogueChar = DialogueLine.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+		dialogueLine = DialogueLine.gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+		playerOptions1 = PlayerOptions1.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+		playerOptions2 = PlayerOptions2.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+		playerOptions3 = PlayerOptions3.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+		playerOptions4 = PlayerOptions4.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
 		
 		SetOptionsOff();
 		SetDialogueOff();
@@ -76,9 +77,9 @@ public class DialogueManager : MonoBehaviour
 		SetDialogueOff();
 	}
 	
-	public void CleanText(Text text)
+	public void CleanText(TextMeshProUGUI text)
 	{
-		text.text = "";
+		text.SetText("");
 	}
 	
 	public void SetOptionsOff()
